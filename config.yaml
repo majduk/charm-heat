@@ -254,3 +254,18 @@ options:
       Openstack mostly defaults to using public endpoints for
       internal communication between services. If set to True this option
       will configure services to use internal endpoints where possible.
+  haproxy-client-timeout:
+    type: string
+    default: 30000
+    description: |
+      Set the maximum inactivity time on the client side for HAProxy. The timeout 
+      value is specified in milliseconds by default, but can be in any other unit
+      if the number is suffixed by the unit. The inactivity timeout applies when 
+      the client is expected to acknowledge or send data.
+  haproxy-server-timeout:
+    type: string
+    default: 30000
+    description: |
+      Set the maximum inactivity time on the server side for HAProxy. The timeout 
+      value is specified in milliseconds by default, but can be in any other unit
+      if the number is suffixed by the unit.
